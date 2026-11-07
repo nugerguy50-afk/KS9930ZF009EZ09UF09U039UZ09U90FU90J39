@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BABFT Auto Farm — FAQ</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>⚡</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starsCanvas" class="stars-canvas"></canvas>
+<div class="grid-bg"></div>
+<div class="orb orb-a"></div>
+<div class="orb orb-b"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">BABFT<span>.</span>FARM</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="script.html">Script</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a href="script.html" class="nav-cta">Get Script</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page page-sm">
+
+  <div class="badge ani-1"><span class="bdot"></span> COMMON QUESTIONS</div>
+  <h1 class="page-title ani-2">FAQ</h1>
+  <p class="lead ani-3">Answers to the most common questions about the script, executors, and account safety.</p>
+
+  <!-- General -->
+  <p class="section-eyebrow ani-3">GENERAL</p>
+  <div class="card ani-4" style="padding:0 24px;margin-bottom:28px;">
+    <div class="faq-item">
+      <button class="faq-q">Is this script free? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>Yes, completely free. There's no key system, no Discord requirement, no Linkvertise, and no paid tier. Copy it and run it — that's it.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">What game does this work on? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>This script is made specifically for <strong style="color:var(--text)">Build a Boat for Treasure</strong> on Roblox. It won't work on other games without modification.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Does it work on mobile? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>Yes, with a mobile-compatible executor such as <strong style="color:var(--text)">Arceus X</strong> or <strong style="color:var(--text)">Delta Executor</strong>. Standard Roblox on iOS or Android without an executor will not work.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Do I need to update the script manually? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>No. The loader fetches the latest build from a remote server every single time you run it. As long as you're using the loader on this page, you're always on the newest version automatically.</p></div>
+    </div>
+  </div>
+
+  <!-- Safety -->
+  <p class="section-eyebrow ani-4">ACCOUNT SAFETY</p>
+  <div class="card ani-5" style="padding:0 24px;margin-bottom:28px;">
+    <div class="faq-item">
+      <button class="faq-q">Can I get banned for using this? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>Using any third-party script on Roblox carries a risk of account action. While this script runs silently and doesn't use obvious hooks, Roblox can detect executor activity at the platform level. Use on an alt account if you're concerned, and always use at your own risk.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Is the remote URL safe? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>The decoded URL points to a GitHub.io hosted file. GitHub.io is a static hosting service from GitHub — no server-side execution, no data collection. You can verify the decoded URL yourself on the <a href="script.html" style="color:var(--accent)">Script page</a>.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Does the script collect any of my data? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>No. The script does not send your username, user ID, IP, or any other data anywhere. It only fetches the remote Lua file and executes it inside Roblox's sandbox. The copy counter on this website is stored locally in your own browser only.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Should I use my main account? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>That's your call. The risk of a ban is low for a farm script like this, but no script can guarantee zero risk. If you're unsure, test it on an alt account first before using it on your main.</p></div>
+    </div>
+  </div>
+
+  <!-- Technical -->
+  <p class="section-eyebrow ani-5">TECHNICAL</p>
+  <div class="card ani-6" style="padding:0 24px;margin-bottom:48px;">
+    <div class="faq-item">
+      <button class="faq-q">What executors are supported? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>Synapse X, KRNL, Fluxus, Delta, and Arceus X are all confirmed working. JJSploit may work but isn't officially tested. Any executor that supports <code style="background:var(--surface2);padding:1px 6px;border-radius:4px;font-size:.8rem;">HttpGet</code> should be compatible.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">The script ran but nothing is happening? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>Make sure you're in an active round — the farm won't trigger during the lobby or build phase. Wait until the round starts (the boat begins moving), then re-execute the script.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">I get an "attempt to index nil" error. How do I fix it? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>This usually means the game updated and broke a dependency in the remote script. Wait a few hours and try again — the remote script will be patched. You can also check back on this page for status updates.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q">Can I see the source code of the actual farm? <span class="faq-arr">▾</span></button>
+      <div class="faq-a"><p>The decoded URL is shown openly on the Script page. You can visit that GitHub.io URL in your browser to inspect the Lua code yourself before executing anything.</p></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding-bottom:16px;">
+    <a href="script.html" class="btn btn-primary"><span>GET THE SCRIPT</span></a>
+  </div>
+
+</div>
+
+<footer>
+  <div>BABFT Auto Farm &nbsp;·&nbsp; <a href="features.html">Features</a> &nbsp;·&nbsp; <a href="guide.html">Guide</a> &nbsp;·&nbsp; <a href="script.html">Script</a></div>
+  <div style="margin-top:6px;">For educational purposes only &nbsp;·&nbsp; Use at your own risk</div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

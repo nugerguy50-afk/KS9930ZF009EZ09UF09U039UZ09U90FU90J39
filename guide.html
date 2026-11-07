@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BABFT Auto Farm — Setup Guide</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>⚡</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starsCanvas" class="stars-canvas"></canvas>
+<div class="grid-bg"></div>
+<div class="orb orb-a"></div>
+<div class="orb orb-b"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">BABFT<span>.</span>FARM</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="script.html">Script</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a href="script.html" class="nav-cta">Get Script</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page page-sm">
+
+  <div class="badge ani-1"><span class="bdot"></span> STEP BY STEP · 2 MINUTES</div>
+  <h1 class="page-title ani-2">Setup Guide</h1>
+  <p class="lead ani-3">Get the farm running in under two minutes. Follow the steps below exactly.</p>
+
+  <!-- Main steps -->
+  <div class="card ani-4" style="margin-bottom:36px;padding:0 28px;">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <h4>Open Roblox and join BABFT</h4>
+          <p>Launch Roblox and search for <strong style="color:var(--text)">Build a Boat for Treasure</strong>. Join any server and wait until you're fully loaded into the game and can see your boat.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <h4>Open your executor</h4>
+          <p>Launch your script executor (Synapse X, KRNL, Fluxus, Arceus X, Delta, etc.) and attach it to Roblox. Wait for the "Attached" or "Injected" confirmation before continuing.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <h4>Copy the script</h4>
+          <p>Go to the <a href="script.html" style="color:var(--accent)">Script page</a> and click the <strong style="color:var(--text)">COPY SCRIPT</strong> button. The full loader script will be copied to your clipboard automatically.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <h4>Paste into your executor</h4>
+          <p>Click inside your executor's script input box and paste the script (<kbd style="background:var(--surface2);padding:2px 8px;border-radius:5px;font-size:.8rem;border:1px solid var(--border2)">Ctrl+V</kbd> on PC, long-press → Paste on mobile). Make sure the full script is there.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-content">
+          <h4>Execute the script</h4>
+          <p>Press the <strong style="color:var(--text)">Execute</strong> button in your executor. The script will fetch the latest farm build from the remote server and start running immediately.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-content">
+          <h4>Watch the farm run</h4>
+          <p>The auto farm is now active. You can minimize Roblox and leave it running. Gold and treasures will be collected automatically in an infinite loop until you close the game or stop the executor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tips -->
+  <h2 class="section-title ani-5">Tips for best results</h2>
+  <div class="grid-2 ani-5" style="margin-bottom:36px;">
+    <div class="card card-glow card-top-line">
+      <h4 style="font-size:.88rem;font-weight:600;margin-bottom:8px;">💡 Use a private server</h4>
+      <p style="font-size:.82rem;color:var(--text2);line-height:1.6;">Running the farm on a private server reduces lag and ensures the farm loop isn't disrupted by other players.</p>
+    </div>
+    <div class="card card-glow card-top-line">
+      <h4 style="font-size:.88rem;font-weight:600;margin-bottom:8px;">💡 Lower graphics settings</h4>
+      <p style="font-size:.82rem;color:var(--text2);line-height:1.6;">Set Roblox graphics to level 1 before starting the farm. It reduces CPU/GPU load significantly during long AFK sessions.</p>
+    </div>
+    <div class="card card-glow card-top-line">
+      <h4 style="font-size:.88rem;font-weight:600;margin-bottom:8px;">💡 Plug in while farming</h4>
+      <p style="font-size:.82rem;color:var(--text2);line-height:1.6;">If you're on a laptop, keep it plugged in. Long sessions can drain the battery faster than the charger replenishes it.</p>
+    </div>
+    <div class="card card-glow card-top-line">
+      <h4 style="font-size:.88rem;font-weight:600;margin-bottom:8px;">💡 Re-execute after crashes</h4>
+      <p style="font-size:.82rem;color:var(--text2);line-height:1.6;">If Roblox crashes or disconnects, simply rejoin and run the script again. The loader always fetches fresh — no changes needed.</p>
+    </div>
+  </div>
+
+  <!-- Troubleshooting -->
+  <h2 class="section-title ani-6">Troubleshooting</h2>
+  <div class="card ani-6" style="padding:0 24px;margin-bottom:48px;">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num" style="background:linear-gradient(135deg,#7f1d1d,var(--danger));box-shadow:0 0 16px rgba(239,68,68,.2);">!</div>
+        <div class="step-content">
+          <h4>Script doesn't execute</h4>
+          <p>Make sure your executor is fully attached to Roblox before running. Try detaching and re-attaching, then execute again.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:linear-gradient(135deg,#7f1d1d,var(--danger));box-shadow:0 0 16px rgba(239,68,68,.2);">!</div>
+        <div class="step-content">
+          <h4>"HttpGet not found" error</h4>
+          <p>Some free executors disable HttpGet. Switch to KRNL, Fluxus, or any executor that supports HTTP requests. Synapse X always works.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num" style="background:linear-gradient(135deg,#7f1d1d,var(--danger));box-shadow:0 0 16px rgba(239,68,68,.2);">!</div>
+        <div class="step-content">
+          <h4>Farm stops after a few minutes</h4>
+          <p>This can happen after a game update. The script auto-updates on each run, so simply re-execute and it should work again immediately.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="script.html" class="btn btn-primary"><span>COPY SCRIPT NOW</span></a>
+    <a href="faq.html" class="btn btn-secondary">Read the FAQ →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div>BABFT Auto Farm &nbsp;·&nbsp; <a href="faq.html">FAQ</a> &nbsp;·&nbsp; <a href="features.html">Features</a> &nbsp;·&nbsp; <a href="script.html">Script</a></div>
+  <div style="margin-top:6px;">For educational purposes only &nbsp;·&nbsp; Use at your own risk</div>
+</footer>
+
+<script src="shared.js"></script>
+</body>
+</html>

